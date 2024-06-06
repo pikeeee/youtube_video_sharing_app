@@ -26,4 +26,8 @@ class VideosController < ApplicationController
   def video_params
     params.require(:video).permit(:url)
   end
+
+  def extract_video_id(url)
+    url.match(%r{youtu(?:\.be|be\.com)/(?:watch\?v=)?([\w-]{11})})&.[](1)
+  end
 end

@@ -20,8 +20,7 @@ gem 'puma', '~> 5.0'
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem 'importmap-rails'
 
-gem 'bcrypt', '~> 3.1', '>= 3.1.12'
-
+# Postgres database adapter
 gem 'pg', '~> 1.5', '>= 1.5.6'
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
@@ -36,7 +35,10 @@ gem 'jbuilder'
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '~> 4.0'
 
-gem 'yt', '~> 0.33.4'
+##### ADDITIONAL FUNCTIONS #####
+
+# bcrypt for password encryption
+gem 'bcrypt', '~> 3.1', '>= 3.1.12'
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -63,8 +65,11 @@ end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
+  # Show database columns and indexes inside files
   gem 'annotate', '~> 3.2'
+  # For debugging
   gem 'pry', '~> 0.14.2'
+  # Rails add-on for static analysis
   gem 'rubocop', '~> 1.64', '>= 1.64.1'
   gem 'rubocop-performance', '~> 1.21'
   gem 'rubocop-rails', '~> 2.25'
