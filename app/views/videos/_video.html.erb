@@ -1,0 +1,8 @@
+<li>
+  <% video_id = extract_video_id(video.url) %>
+  <% if video_id %>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= video_id %>" frameborder="0" allowfullscreen></iframe>
+  <% else %>
+    <a href="<%= video.url %>"><%= video.title %></a> (shared by <%= video.user.name %>)
+  <% end %>
+</li>

@@ -1,0 +1,8 @@
+
+<%= form_with model: video, data: { controller: "video-form", action: "ajax:success->video-list#handleFormSubmission" } do |f| %>
+  <div class="field">
+    <%= f.label :url, "YouTube URL" %>
+    <%= f.text_field :url %>
+  </div>
+  <%= f.submit %>
+<% end %>

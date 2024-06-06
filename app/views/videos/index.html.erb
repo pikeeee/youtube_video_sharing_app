@@ -1,0 +1,7 @@
+<div data-controller="video-list">
+  <ul data-video-list-target="list">
+    <% @videos.each do |video| %>
+      <%= render partial: 'video', locals: { video: video } %>
+    <% end %>
+  </ul>
+</div>

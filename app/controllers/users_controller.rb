@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     @user = User.create(user_params)
     if @user.valid?
       @user.save
-      redirect_to @user
+      redirect_to root_path
     else
       redirect :new
     end
